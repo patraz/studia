@@ -1,6 +1,6 @@
 browser_speed = {'Chrome': 100, 'Opera': 23, 'Firefox': 76, 'Safari': 58}
 
-print(list(browser_speed.keys())[0])  #klucze
+print(list(browser_speed.keys()))  #klucze
 print(list(browser_speed.values())) #wartości
 print(list(browser_speed.items())) # (klucze,wartosci) lista krotek
 
