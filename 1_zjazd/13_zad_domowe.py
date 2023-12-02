@@ -7,7 +7,7 @@ from f_do_domowe import user_dict,find_available_name, user_add, is_username_ava
 # - jeśli nazwa użytkownika jest zajęta program prosi o ponowne wprowadzenie nazwy bądź proponuje swoją podobną nazwę
 # - po wprowadzeniu uzytkownika, program 2 razy prosi o hasło
 # - po dwukrotnie wprowadzonym takim samym haśle, uzytkownik zostaje dodany do listy użytkowników, a jego hasło jest zapisane w drugiej liście
-
+# hasło zawiera cyfrę, duża i mała litere i znak specjalny
 
 
 
