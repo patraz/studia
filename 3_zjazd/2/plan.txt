@@ -1,0 +1,3 @@
+- os walk
+- obiektowka
+- moze selenium
