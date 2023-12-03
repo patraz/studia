@@ -1,9 +1,23 @@
-my_list = [1,2,3]
 
-x = int(input('Podaj 1sza liczbe: '))
-y = int(input('Podaj 2ga liczbe: '))
+def can_be_int(data):
+    try:
+        data = int(data)
+        return True
+    except ValueError:
+        return False
+    
+x = input('Podaj liczbę: ')
+if can_be_int(x):
+    print('liczymy dalej ')
+else:
+    print('Podales zla liczbe')
 
-try:
-    print(x/y)
-except:
-    print('dupa')
+
+def convert(data):
+    try:
+        data = int(data)
+        print('Skonwertowano do int')
+        return data
+    except ValueError:
+        print('Zostanie string')
+        return data

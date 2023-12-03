@@ -13,20 +13,15 @@
 available = {'mleko': 3, 'jajko': 25, 'maka': 7, 'cukier': 4, 'maliny': 3}
 cake = {'mleko': 1.1, 'jajko': 8, 'maka': 0.5, 'cukier': 0.3}
 
-minimum = 1000000
-critical_ingredient = ''
-results = {}
+def how_many_cakes(available_ingredients: dict, necessary_ingredients: dict):
 
-for key in cake.keys():
-    print(f'Bierzemy {key}')
-    print(f'zrobimy {available[key] / cake[key]} ciast')
-    if available[key] / cake[key] < minimum:
-        minimum = available[key] / cake[key]
-        critical_ingredient = key
-    results[key] = available[key] / cake[key]
-print(f'Zrobimy {int(minimum)} ciast. Najszybciej braknie {critical_ingredient}')
-print('\n', results, '\n')
+    results = {}
+    for key in cake.keys():
+        results[key] = available[key] / cake[key]
+    sorted_available = sorted(results.items(), key=lambda x: x[1])
 
-sorted_available = sorted(results.items(), key=lambda x: x[1])
-print(sorted_available)
+#    print(f'Zrobimy {int(sorted_available[0][1])} ciast. Najszybciej braknie {sorted_available[0][0]}')
+    return int(sorted_available[0][1])
+
+how_many_cakes(available, cake)
 
